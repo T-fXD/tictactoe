@@ -1,0 +1,151 @@
+.tile {
+    padding: 0;
+    margin: 30px;
+    background: transparent;
+    transition: background 0.3s ease, border-radius 0.5s ease, border-width 0.3s ease, width 0.2s ease, height 0.2s ease, transform 0.2s ease, filter 0.2s ease, margin 0.2s ease;
+}
+
+.tile.circle {
+    margin: 12.5;
+    height: 75px;
+    width: 75px;
+    border-radius: 50%;
+    border: 1px solid #ff5747;
+    box-shadow: 8px 8px 0px #ff948a;
+}
+
+.tile.circle.fill {
+    border: 18px solid #ff5747;
+}
+
+.tile.square {
+    margin: 15;
+    height: 70px;
+    width: 70px;
+    border-radius: 15px;
+    border: 1px solid #477eff;
+    box-shadow: 8px 8px 0px #a6c1ff;
+}
+
+.tile.square.fill {
+    background: #477eff;
+}
+
+.tile:hover {
+    border-width: 5px;
+}
+
+.tile:active {
+    transform: scale(0.9);
+}
+
+
+
+body {
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 100px 100px 100px;
+    grid-template-rows: 100px 100px 100px;
+}
+
+.align {
+    width: 100%;
+    height: 100%;
+    padding: 20;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+
+
+.but {
+    margin-top: 20px;
+    margin-bottom: 15px;
+    color: #eeeeee;
+    background: #6e6e6e;
+    border: none;
+    border-radius: 100px;
+    padding: 5px 10px;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.but:hover {
+    background: #919191;
+}
+
+.but:active {
+    transform: scale(0.9);
+}
+
+
+
+.o {
+    background: #ff5747;
+}
+
+.o:hover {
+    background: #ff948a;
+}
+
+.x {
+    background: #477eff;
+}
+
+.x:hover {
+    background: #a6c1ff;
+}
+
+
+
+.ai {
+    background: #ff47f9;
+}
+
+.ai:hover {
+    background: #ffa6fe;
+}
+
+.human {
+    background: #af47ff;
+}
+
+.human:hover {
+    background: #ce8fff;
+}
+
+
+
+.easy {
+    background: #29ff49;
+    color: black;
+}
+
+.easy:hover {
+    background: #a6ffb3;
+}
+
+.med {
+    background: #fff347;
+    color: black;
+}
+
+.med:hover {
+    background: #fff9a9;
+}
+
+.hard {
+    background: #ff4763;
+    color: black;
+}
+
+.hard:hover {
+    background: #ff98a7;
+}

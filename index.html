@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>TicTacToe</title>
+        
+        <link rel="stylesheet" href="style.css">
+        <script src="main.js"></script>
+    </head>
+
+    <body>
+        <div class="align">
+            <div class="difficulty">
+                <button onclick="set_depth(1)" class="but" id="easy">Easy</button>
+                <button onclick="set_depth(2)" class="but" id="med">Medium</button>
+                <button onclick="set_depth(11)" class="but hard" id="hard">Hard</button>
+            </div>
+
+            <div class="x-o-select">
+                <button onclick="set_p('x')" class="but x" id="sq">Play as Squares</button>
+                <button onclick="set_p('o')" class="but" id="cir">Play as Circles</button>
+            </div>
+
+            <div class="p-select">
+                <button onclick="set_p_num(true)" class="but ai" id="ai">Play vs. AI</button>
+                <button onclick="set_p_num(false)" class="but" id="hum">Play vs. Human</button>
+            </div>
+
+            <div class="grid">
+                <button id="0-0" class="tile square" onclick="move(0, 0)"></button>
+                <button id="0-1" class="tile square" onclick="move(0, 1)"></button>
+                <button id="0-2" class="tile square" onclick="move(0, 2)"></button>
+
+                <button id="1-0" class="tile square" onclick="move(1, 0)"></button>
+                <button id="1-1" class="tile square" onclick="move(1, 1)"></button>
+                <button id="1-2" class="tile square" onclick="move(1, 2)"></button>
+
+                <button id="2-0" class="tile square" onclick="move(2, 0)"></button>
+                <button id="2-1" class="tile square" onclick="move(2, 1)"></button>
+                <button id="2-2" class="tile square" onclick="move(2, 2)"></button>
+            </div>
+            
+            <button onclick="reset()" class="but">Reset</button>
+        </div>
+    </body>
+</html>
