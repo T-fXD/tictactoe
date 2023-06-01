@@ -149,3 +149,11 @@ body {
 .hard:hover {
     background: #ff98a7;
 }
+
+
+
+.reset {
+    width: 160px;
+    height: 64px;
+    font-size: 24px;
+}
