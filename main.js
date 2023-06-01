@@ -10,9 +10,6 @@ var solo = true
 
 var max_depth = 11
 
-// Safari whyyyyyy
-alert("Warning: Some animations may break for Safari")
-
 // Swap between 1 & 2 players
 function set_p_num(is_solo) {
     solo = is_solo
