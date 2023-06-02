@@ -36,29 +36,30 @@ function set_p_num(is_solo) {
 
 // Swap between x & o
 function set_p(new_p) {
-    // Check if now Ai's turn
-    if(new_p != p && solo) {
-        p = new_p
-        
-        if(state(board[0]) == null) {
-            best_move = bestMove(board)
 
-            board[best_move[0]][best_move[1]] = p == "x" ? "o" : "x"
-            turn = (turn == "x" ? "o" : "x")
-        
-            redraw()
-        }
-    } else {
-        p = new_p
-    }
+    reset()
+    p = new_p
 
-    // Highlight currently selected option
-    if(new_p == "x") {
-        document.getElementById("sq").className = "but x"
-        document.getElementById("cir").className = "but"
-    } else if(new_p == "o") {
-        document.getElementById("cir").className = "but o"
-        document.getElementById("sq").className = "but"
+    switch(new_p) {
+        case "x":
+            reset()
+            document.getElementById("sq").className = "but x"
+            document.getElementById("cir").className = "but"
+            break
+        
+        case "o":
+            // Ai move
+
+            if(solo) {
+                best_move = bestMove(board)
+                board[best_move[0]][best_move[1]] = p == "x" ? "o" : "x"
+                turn = (turn == "x" ? "o" : "x")
+                redraw()
+            }
+
+            document.getElementById("cir").className = "but o"
+            document.getElementById("sq").className = "but"
+            break
     }
 }
 
