@@ -40,12 +40,14 @@ function set_p(new_p) {
     if(new_p != p && solo) {
         p = new_p
         
-        best_move = bestMove(board)
+        if(state(board[0]) == null) {
+            best_move = bestMove(board)
 
-        board[best_move[0]][best_move[1]] = p == "x" ? "o" : "x"
-        turn = (turn == "x" ? "o" : "x")
-    
-        redraw()
+            board[best_move[0]][best_move[1]] = p == "x" ? "o" : "x"
+            turn = (turn == "x" ? "o" : "x")
+        
+            redraw()
+        }
     } else {
         p = new_p
     }
