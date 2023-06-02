@@ -52,12 +52,13 @@ body {
     display: grid;
     grid-template-columns: 100px 100px 100px;
     grid-template-rows: 100px 100px 100px;
+    margin-right: 32px;
+    margin-bottom: 16px;
 }
 
 .align {
     width: 100%;
     height: 100%;
-    padding: 20;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
