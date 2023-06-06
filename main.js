@@ -10,6 +10,9 @@ var solo = true
 
 var max_depth = 11
 
+// Safari Bug
+alert("Notice: Using Chrome Is Advised")
+
 // Swap between 1 & 2 players
 function set_p_num(is_solo) {
     solo = is_solo
