@@ -91,7 +91,6 @@ function move(i, j) {
         board[i][j] = turn
 
         turn = (turn == "x" ? "o" : "x")
-        console.log(turn)
 
         redraw()
 
@@ -228,6 +227,7 @@ function reset() {
 function bestMove(_board) {
     var ai = turn
     var best_score = -1000
+    var best_move = []
 
     for(var i = 0; i < 3; i++) {
         for(var j = 0; j < 3; j++) {
@@ -238,13 +238,19 @@ function bestMove(_board) {
 
                 if(score > best_score) {
                     best_score = score
-                    var best_move = [i, j]
+                    best_move = [[i, j]]
+                }
+
+                else if(score == best_score) {
+                    best_move.push([i, j])
                 }
             }
         }
     }
 
-    return best_move
+    var _ = Math.floor(Math.random() * best_move.length)
+
+    return best_move[_]
 }
 
 function minimax(_board, ai, depth, is_max) {
